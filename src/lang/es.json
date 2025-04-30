@@ -1,0 +1,39 @@
+
+{
+    "hero": {
+        "title": "Hola, soy",
+        "subtitle": "Soy desarrollador web full stack.",
+        "button": "Ver mi trabajo"
+    },
+    "navBar": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "aboutMe": {
+        "title": "Sobre mí",
+        "description": "Soy un desarrollador web Argentino apasionado por la tecnología y el aprendizaje continuo. Me encanta crear aplicaciones web interactivas y funcionales que mejoren la experiencia del usuario. Siempre estoy buscando nuevos desafíos y oportunidades para crecer profesionalmente."
+    },
+    "projects": {
+        "title": "Proyectos",
+        "project_1_title": "Pacuco",
+        "description_1_project_1": "Ecommerce desarrollado con React, Node.js, Express.js, MongoDB. Pensado principalmente para mobile.",
+        "description_2_project_1": "La idea comenzo para poder digitalizar un emprendimiento familiar, y que la venta de los productos se realice de manera mas automatica.",
+        "project_2_title": "Torneos Atletismo",
+        "description_1_project_2": "Pagina web para la carga de resultados de torneos de Atletismo desarrollado con React, Node.js, Express.js, MongoDB. Pensado principalmente para mobile.",
+        "description_2_project_2": "La idea es mejorar la experiencia de los atletas y aficionados a la hora de ver los resultados de los torneos.",
+        "project_3_title": "Space Survival",
+        "description_1_project_3": "Juego desarrollado para una materia de la Universidad.",
+        "description_2_project_3": "Se desarrollo con Python, mas especificamente con la libreria pygame. Se uso SQLite para persistencia de datos y manejo de estadisticas.",
+        "span_download": "Descargar"
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "¿Tenes alguna pregunta o queres que trabajemos juntos? Enviame un correo electronico y me pongo en contacto lo antes posible.",
+        "placeholder_name": "Nombre",
+        "placeholder_email": "Correo electronico",
+        "placeholder_message": "Mensaje",
+        "button_send": "ENVIAR"
+    }        
+}

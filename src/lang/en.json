@@ -1,0 +1,39 @@
+
+{
+    "hero": {
+        "title": "Hello, I'm",
+        "subtitle": "I'm a full stack web developer.",
+        "button": "View my work"
+    },
+    "navBar": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "aboutMe": {
+        "title": "About",
+        "description": "I'm a full stack web developer from Argentina with a passion for creating beautiful and functional web applications. I have experience in both front-end and back-end development, and I'm always eager to learn new technologies and improve my skills."
+    },
+    "projects": {
+        "title": "Projects",
+        "project_1_title": "Pacuco",
+        "description_1_project_1": "E-commerce develop with React, Node.js, Express.js, MongoDB. Tought mainly for mobile.",
+        "description_2_project_1": "The idea started to digitalize a family business, and to make the sale of the products more automatic.",
+        "project_2_title": "Torneos Atletismo",
+        "description_1_project_2": "Web page for the results of Track and Field tournaments developed with React, Node.js, Express.js, MongoDB. Tought mainly for mobile.",
+        "description_2_project_2": "The idea was to improve the experience of athletes and fans when viewing the results of the tournaments.",
+        "project_3_title": "Space Survival",
+        "description_1_project_3": "Game developed for a subject at the University.",
+        "description_2_project_3": "It was developed with Python, specifically with the pygame library. SQLite was used for data persistence and statistics management.",
+        "span_download": "Download"
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Do you have any questions or want to work together? Send me an email and I'll get back to you as soon as possible.",
+        "placeholder_name": "Name",
+        "placeholder_email": "Email",
+        "placeholder_message": "Message",
+        "button_send": "SUBMIT"
+    }  
+}

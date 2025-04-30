@@ -1,9 +1,13 @@
 
 import { useState, useRef, useEffect } from "react";
+import { useSelector } from 'react-redux';
+import translations from '../lang';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
 const ContactMe = () => {
+    const language = useSelector(state => state.language);
+    const t = translations[language];
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -42,15 +46,15 @@ const ContactMe = () => {
     return (
         <section className="contact" id="contact">
             <div className="contact_container">
-                <h2 className="contact_title">Contacto</h2>
+                <h2 className="contact_title">{t.contact.title}</h2>
                 <p className="contact_description">
-                    ¿Tenes alguna pregunta o queres que trabajemos juntos? Enviame un correo electronico y me pongo en contacto lo antes posible.
+                    {t.contact.description}
                 </p>
                 <form ref={form} className="contact_form" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="name"
-                        placeholder="Nombre"
+                        placeholder={t.contact.placeholder_name}
                         onChange={handleChange}
                         value={formData.name}
                         className="contact_input"
@@ -59,7 +63,7 @@ const ContactMe = () => {
                     <input
                         type="email"
                         name="email"
-                        placeholder="Correo Electrónico"
+                        placeholder={t.contact.placeholder_email}
                         onChange={handleChange}
                         value={formData.email}
                         className="contact_input"
@@ -67,7 +71,7 @@ const ContactMe = () => {
                     />
                     <textarea
                         name="message"
-                        placeholder="Mensaje"
+                        placeholder={t.contact.placeholder_message}
                         onChange={handleChange}
                         value={formData.message}
                         className="contact_textarea"
@@ -75,7 +79,7 @@ const ContactMe = () => {
                         required
                     ></textarea>
                     <button type="submit" className="contact_button">
-                        ENVIAR
+                        {t.contact.button_send}
                     </button>
                 </form>
             </div>

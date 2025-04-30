@@ -79,14 +79,6 @@ body {
     color: var(--color-bg);
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    :root {
-        --font-size-title: 2rem;
-        --font-size-subtitle: 1.2rem;
-        --font-size-btn: 1rem;
-    }
-}
 
 /* global.css o toast.module.css */
 .Toastify__toast--success {
@@ -112,3 +104,71 @@ body {
     font-size: 0.9rem;
 }
   
+
+.language_container{
+    display: flex;
+
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 100%;
+    width: 100px;
+    height: 50px;
+}
+
+.language_item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language_item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language_selected {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.language_selected:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language_dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 101;
+}
+
+.flag {
+    width: 30px;
+    height: 25px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    :root {
+        --font-size-title: 2rem;
+        --font-size-subtitle: 1.2rem;
+        --font-size-btn: 1rem;
+    }
+
+    .language_container{
+        position: relative;
+        left: 0;
+
+    }
+}

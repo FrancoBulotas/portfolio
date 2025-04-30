@@ -1,6 +1,9 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+import { useSelector } from 'react-redux';
+import translations from '../lang';
+
 import USER from "../assets/images/foto-cv-circulo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +24,9 @@ import GITHUBLOGO from '../assets/images/github-logo.png';
 const AboutMe = () => {
     const aboutMeRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+
+    const language = useSelector(state => state.language);
+    const t = translations[language];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -48,7 +54,7 @@ const AboutMe = () => {
             <div className="about-me_container">
                 <div className="about-me_header">
                     <h2 className="about-me_title">
-                        Sobre <span className="about-me_highlight">Mi</span>
+                        {t.aboutMe.title}<span className="about-me_highlight"></span>
                     </h2>
                 </div>
                 <div className={`about-me_content ${isVisible ? "visible" : ""}`}>
@@ -56,9 +62,7 @@ const AboutMe = () => {
                         <img src={USER} alt="imagen de usuario" className="user_img" />
                         {/* <FontAwesomeIcon icon={faCircleUser} className="user_img" /> */}
                         <p>
-                            Soy un desarrollador web apasionado por la tecnología y el aprendizaje continuo. 
-                            Me encanta crear aplicaciones web interactivas y funcionales que mejoren la experiencia del usuario. 
-                            Siempre estoy buscando nuevos desafíos y oportunidades para crecer profesionalmente.
+                            {t.aboutMe.description}
                         </p>
                         <a href="https://github.com/FrancoBulotas" target="_blank" className="footer_link github_link">
                             <img src={GITHUBLOGO} alt="" className="footer_img" />

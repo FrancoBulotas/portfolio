@@ -1,9 +1,15 @@
+
 import { useState, useEffect } from "react";
+import { useSelector } from 'react-redux';
+import translations from '../lang';
+
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { loadFull } from "tsparticles";
 
 const Hero = () => {
+    const language = useSelector(state => state.language);
+    const t = translations[language];
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -15,7 +21,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="hero">
+        <section className="hero" id="hero">
             <Particles
                 className="hero_particles"
                 id="tsparticles"
@@ -52,13 +58,13 @@ const Hero = () => {
             />
             <div className="hero_content">
                 <div className="hero_title">
-                    Hola, soy <span className="hero_name">Franco</span>.
+                    {t.hero.title} <span className="hero_name">Franco</span>.
                 </div>
                 <div className="hero_subtitle">
-                    Soy desarrollador web full stack.
+                    {t.hero.subtitle}
                 </div>
                 <button className="btn btn-outline hero_btn" onClick={() => window.scrollTo({ top: document.getElementById("about").offsetTop, behavior: "smooth" })}>
-                    Ver mi trabajo <span className="hero_arrow">↓</span>
+                    {t.hero.button} <span className="hero_arrow">↓</span>
                 </button>
             </div>
         </section>

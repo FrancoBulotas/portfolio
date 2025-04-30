@@ -1,7 +1,12 @@
+
 import React, { useEffect, useState } from "react";
+import { useSelector } from 'react-redux';
+import translations from '../lang';
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState("");
+    const language = useSelector(state => state.language);
+    const t = translations[language];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,12 +31,20 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar_list">
+                {/* <li>
+                    <a
+                        href="#hero"
+                        className={activeSection === "about" ? "active" : ""}
+                    >
+                        {t.navBar.home}
+                    </a>
+                </li> */}
                 <li>
                     <a
                         href="#about"
                         className={activeSection === "about" ? "active" : ""}
                     >
-                        Sobre Mi
+                        {t.navBar.about}
                     </a>
                 </li>
                 <li>
@@ -39,7 +52,7 @@ const Navbar = () => {
                         href="#projects"
                         className={activeSection === "projects" ? "active" : ""}
                     >
-                        Proyectos
+                        {t.navBar.projects}
                     </a>
                 </li>
                 <li>
@@ -47,7 +60,7 @@ const Navbar = () => {
                         href="#contact"
                         className={activeSection === "contact" ? "active" : ""}
                     >
-                        Contacto
+                        {t.navBar.contact}
                     </a>
                 </li>
             </ul>
