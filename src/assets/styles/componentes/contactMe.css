@@ -1,0 +1,124 @@
+.contact {
+    padding: 4rem 2rem;
+    background: transparent;
+    color: var(--color-text);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    height: 70vh;
+}
+
+.contact_container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block; /* Asegura que el ancho del ::after dependa del texto */
+}
+
+.contact_title::after {
+    content: "";
+    position: absolute;
+    bottom: 0.3rem; /* Ajusta la distancia debajo del texto */
+    left: 2.2rem;
+    width: 90%; /* El ancho será igual al texto */
+    height: 20px; /* Altura del subrayado */
+    background: var(--color-accent);
+    z-index: -1; /* Coloca el subrayado detrás del texto */
+}
+
+.contact_description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+.contact_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact_input,
+.contact_textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--color-bg-navbar);
+    color: var(--color-text);
+    font-size: 1rem;
+    font-family: var(--font-main);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact_input:focus,
+.contact_textarea:focus {
+    border-color: var(--color-accent);
+}
+
+.contact_button {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid var(--color-accent);
+    color: var(--color-text);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    transition: color 0.3s ease;
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+    width: 20%;
+}
+
+.contact_button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    transform: scaleY(0); /* Inicialmente no visible */
+    transform-origin: bottom; /* La animación comienza desde abajo */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+    z-index: -1; /* Coloca el fondo detrás del texto */
+}
+
+.contact_button:hover {
+    color: var(--color-bg); /* Cambia el color del texto */
+}
+
+.contact_button:hover::before {
+    transform: scaleY(1); /* Llena el fondo desde abajo hacia arriba */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact_container {
+        padding: 0 1rem;
+    }
+
+    .contact_title {
+        font-size: 2rem;
+    }
+
+    .contact_description {
+        font-size: 0.9rem;
+    }
+}

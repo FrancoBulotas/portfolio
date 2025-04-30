@@ -1,0 +1,114 @@
+/* Importa Montserrat ExtraLight y Regular */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+
+@import '../styles/componentes/hero.css';
+@import '../styles/componentes/navbar.css';
+@import '../styles/componentes/aboutMe.css';
+@import '../styles/componentes/proyects.css';
+@import '../styles/componentes/contactMe.css';
+@import '../styles/componentes/footer.css';
+
+/* Variables para colores y fuentes */
+:root {
+    --color-bg: #0d0d12;
+    --color-bg-navbar: #272727;
+    --color-text: #fff;
+    --color-accent: #e94560;
+    --font-main: 'Montserrat', Arial, sans-serif;
+    --font-title-weight: 200;
+    --font-bold: 700;
+    --font-size-title: 3rem;
+    --font-size-subtitle: 2rem;
+    --font-size-btn: 1.25rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+}
+
+.below_hero {
+    background: #000000;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+.btn {
+    font-size: var(--font-size-btn);
+    padding: 0.5em 2em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-family: inherit;
+    font-weight: 500;
+    outline: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    position: relative;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    :root {
+        --font-size-title: 2rem;
+        --font-size-subtitle: 1.2rem;
+        --font-size-btn: 1rem;
+    }
+}
+
+/* global.css o toast.module.css */
+.Toastify__toast--success {
+    background-color: #c1ffa4 !important;
+    color: #111827 !important;
+    font-family: var(--font-main) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 4px solid rgb(64, 245, 118);
+}
+  
+.Toastify__toast--error {
+    background: #ffa4a4 !important;
+    color: #111827 !important;
+    font-family: var(--font-main) !important;
+    border-radius: 12px;
+    border-left: 4px solid #b91c1c;
+}
+  
+.Toastify__toast-body {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+}
+  

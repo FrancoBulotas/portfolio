@@ -1,0 +1,2 @@
+Utiliza las mejores practicas que haya para que el codigo css sea reutilizable en un futuro, 
+y pensa el diseño tanto para desktop como para mobile

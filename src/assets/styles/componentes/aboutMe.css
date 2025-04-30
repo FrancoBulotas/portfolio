@@ -1,0 +1,234 @@
+.about-me {
+    padding: 4rem 2rem;
+    background: transparent;
+    color: var(--color-text);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.about-me_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me_title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block; /* Asegura que el ancho del ::after dependa del texto */
+}
+
+/* .about-me_highlight {
+    color: var(--color-accent);
+    position: relative;
+} */
+
+.about-me_highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 0.3rem; /* Ajusta la distancia debajo del texto */
+    left: 2.2rem;
+    width: 90%; /* El ancho será igual al texto */
+    height: 20px; /* Altura del subrayado */
+    background: var(--color-accent);
+    z-index: -1; /* Coloca el subrayado detrás del texto */
+}
+
+.about-me_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    padding: 4rem 0;
+}
+
+.about-me_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.github_link{
+    width: 100%;
+    text-align: left;
+}
+
+.user_img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: ease 0.3s;
+}
+
+.user_svg {
+    width: 200px;
+    height: 200px;
+}
+
+.about-me_skills {
+    display: flex;    
+    gap: 1.5rem;    
+}
+
+.skills_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.about-me_skill {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.6rem;
+    border: 2.5px solid var(--color-accent);
+    transition: ease 0.3s;
+    width: 5.5rem;
+}
+
+.about-me_skill:hover {
+    transform: scale(0.95);
+}
+
+.about-me_skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.about-me_skill span {
+    font-size: 0.9rem;
+    font-weight: var(--font-bold);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .about-me_content {
+        padding: 2rem 0rem;
+        text-align: left;
+    }
+    .about-me_content {
+        flex-direction: column;
+    }
+
+    .about-me_skills {
+        gap: .5rem;
+    }
+
+    .skills_row {
+        gap: .5rem;
+    }
+
+    .about-me_skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.6rem;
+        border: 2.5px solid var(--color-accent);
+    }
+}
+
+
+/* Animación para el slide desde la izquierda */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación para las skills (fade-in con delay) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    33%{
+        opacity: 0.33;
+    }
+    66%{
+        opacity: 0.66;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aplicación de animaciones */
+.about-me_content.visible .about-me_description {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* .about-me_content.visible .about-me_skills .about-me_skill {
+    opacity: 0; 
+    animation: fadeIn 1.5s ease forwards;
+} */
+
+.about-me_content.visible .about-me_skills .first_skill, .about-me_content.visible .about-me_skills .second_skill, 
+.about-me_content.visible .about-me_skills .third_skill, .about-me_content.visible .about-me_skills .fourth_skill, 
+.about-me_content.visible .about-me_skills .fifth_skill, .about-me_content.visible .about-me_skills .sixth_skill, 
+.about-me_content.visible .about-me_skills .seventh_skill, .about-me_content.visible .about-me_skills .eighth_skill, 
+.about-me_content.visible .about-me_skills .ninth_skill, .about-me_content.visible .about-me_skills .tenth_skill {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+
+/* Animación independiente para cada skill */
+.about-me_content.visible .about-me_skills .first_skill {
+    animation-delay: 0.2s;
+}
+
+.about-me_content.visible .about-me_skills .second_skill {
+    animation-delay: 1s;
+}
+
+.about-me_content.visible .about-me_skills .third_skill {
+    animation-delay: 0.6s;
+}
+
+.about-me_content.visible .about-me_skills .fourth_skill {
+    animation-delay: 0.5s;
+}
+
+.about-me_content.visible .about-me_skills .fifth_skill {
+    animation-delay: 1.3s;
+}
+
+.about-me_content.visible .about-me_skills .sixth_skill {
+    animation-delay: 0.8s;
+}
+
+.about-me_content.visible .about-me_skills .seventh_skill {
+    animation-delay: 2s;
+}
+
+.about-me_content.visible .about-me_skills .eighth_skill {
+    animation-delay: 1.5s;
+}
+
+.about-me_content.visible .about-me_skills .ninth_skill {
+    animation-delay: 0.4s;
+}
+
+.about-me_content.visible .about-me_skills .tenth_skill {
+    animation-delay: 1.9s;
+}

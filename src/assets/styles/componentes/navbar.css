@@ -1,0 +1,41 @@
+/* Navbar */
+.navbar {
+    position: sticky; /* Se queda fijo en la parte superior del contenedor */
+    top: 0; /* Se fija en la parte superior de la pantalla */
+    width: 100%;
+    background: var(--color-bg-navbar);
+    color: var(--color-text);
+    display: flex; /* Siempre visible */
+    justify-content: center;
+    padding: 1rem 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destacar el navbar */
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar_list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar_list a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: var(--font-bold);
+    transition: color 0.2s;
+}
+
+.navbar_list a:hover {
+    color: var(--color-accent);
+}
+
+/* Estilo para el enlace activo */
+.navbar_list a.active {
+    color: var(--color-accent); /* Cambia el color a rojo */
+    font-weight: var(--font-bold); /* Opcional: resalta el enlace activo */
+    border-bottom: 2px solid var(--color-accent); /* Subrayado decorativo */
+    transition: color 0.3s, border-bottom 0.3s;
+}
