@@ -121,4 +121,21 @@
     .contact_description {
         font-size: 0.9rem;
     }
+    
+    .contact_input,
+    .contact_textarea {
+        padding: 0.75rem .1rem;
+    }
+
+    .contact_button {
+        width: 100%;
+    }
+
+    .contact_button:focus {
+        color: var(--color-bg); /* Cambia el color del texto */
+    }
+
+    .contact_button:focus::before {
+        transform: scaleY(1); /* Llena el fondo desde abajo hacia arriba */
+    }
 }
