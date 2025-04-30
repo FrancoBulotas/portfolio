@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { setLanguage } from '../store/languageReducer';
 
-const ARG_FLAG = "/src/assets/images/bandera-arg.png";
-const GB_FLAG = "/src/assets/images/en-flag.png";
+const ARG_FLAG = "https://pacucostorage.blob.core.windows.net/common/bandera-arg.png";
+const GB_FLAG = "https://pacucostorage.blob.core.windows.net/common/en-flag.png";
 
 const Langugage = () => {
     const dispatch = useDispatch();
@@ -27,12 +27,12 @@ const Langugage = () => {
             <div className="language_selected" onClick={toggleDropdown}>
                 {language === "es" ? (
                     <>
-                        <img src={ARG_FLAG} alt="Argentina" className="flag" />
+                        <img src={ARG_FLAG} className="flag" />
                         <span>ES</span>
                     </>
                 ) : (
                     <>
-                        <img src={GB_FLAG} alt="Great Britain" className="flag" />
+                        <img src={GB_FLAG} className="flag" />
                         <span>EN</span>
                     </>
                 )}
