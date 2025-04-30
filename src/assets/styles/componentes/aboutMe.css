@@ -46,6 +46,7 @@
 }
 
 .about-me_description {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,7 +175,8 @@
 
 /* Aplicación de animaciones */
 .about-me_content.visible .about-me_description {
-    animation: slideInFromLeft 1s ease-out;
+    opacity: 0;
+    animation: slideInFromLeft 1s ease-out forwards;
 }
 
 /* .about-me_content.visible .about-me_skills .about-me_skill {
