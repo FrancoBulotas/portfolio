@@ -2,7 +2,7 @@
 {
     "hero": {
         "title": "Hola, soy",
-        "subtitle": "Soy desarrollador web full stack.",
+        "subtitle": "Desarrollador web full stack.",
         "button": "Ver mi trabajo"
     },
     "navBar": {
@@ -20,9 +20,9 @@
         "project_1_title": "Pacuco",
         "description_1_project_1": "Ecommerce desarrollado con React, Node.js, Express.js, MongoDB. Pensado principalmente para mobile.",
         "description_2_project_1": "La idea comenzo para poder digitalizar un emprendimiento familiar, y que la venta de los productos se realice de manera mas automatica.",
-        "project_2_title": "Torneos Atletismo",
-        "description_1_project_2": "Pagina web para la carga de resultados de torneos de Atletismo desarrollado con React, Node.js, Express.js, MongoDB. Pensado principalmente para mobile.",
-        "description_2_project_2": "La idea es mejorar la experiencia de los atletas y aficionados a la hora de ver los resultados de los torneos.",
+        "project_2_title": "Nutrición Deportiva Integral | Cami Espósito",
+        "description_1_project_2": "Landing page para acompañamiento nutricional para mejorar tus hábitos, tu rendimiento y tu bienestar desde una mirada realista, flexible y sostenible.",
+        "description_2_project_2": "La idea es generar mas confianza en el cliente, y que pueda conocer un poco mas sobre el servicio que se ofrece, y de esta manera generar mas ventas.",
         "project_3_title": "Space Survival",
         "description_1_project_3": "Juego desarrollado para una materia de la Universidad.",
         "description_2_project_3": "Se desarrollo con Python, mas especificamente con la libreria pygame. Se uso SQLite para persistencia de datos y manejo de estadisticas.",

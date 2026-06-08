@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import translations from '../lang';
 
 import PACUCOIMAGE from '../assets/images/collage-pacuco.png';
-import TORNEOSIMAGE from '../assets/images/collage-torneos-atletismo.png';
+import TORNEOSIMAGE from '../assets/images/cami-home.png';
 import GITHUBLOGO from '../assets/images/github-logo.png';
 import SPACE_SURVIVAL_IMAGE from '../assets/images/space-survival-image.png';
 import DOWNLOAD_IMAGE from '../assets/images/download-image.png'; 
@@ -30,21 +30,21 @@ const Projects = () => {
                             <p className="project_description">{t.projects.description_2_project_1}</p>
                             <div className='project_links'>
                                 <a href="https://www.pacuco.com.ar" target="_blank" className="project_link">www.pacuco.com.ar</a>
-                                <div>
+                                {/* <div>
                                     <a href="https://github.com/FrancoBulotas/pacuco" target="_blank" className="project_link">
                                         <img src={GITHUBLOGO} alt="" className='proyect_img_git' />
                                         <span>GitHub</span>
-                                    </a>
-                                </div>
+                                    </a> 
+                                </div> */}
                             </div>
                         </div>
                     </div>
 
                     <div className="project_card project_right">
                         <h3 className="project_title mobile">{t.projects.project_2_title}</h3>
-                        <a href="https://www.torneosatletismo.com.ar" target="_blank">
+                        <a href="https://www.camiesposito.com" target="_blank">
                             <div className="project_image_container">
-                                <img src={TORNEOSIMAGE} alt="Torneos Atletismo" className="project_image project_image_right" />
+                                <img src={TORNEOSIMAGE} alt="Cami Espósito" className="project_image project_image_right" />
                             </div>
                         </a>
                         <div className="project_info project_right_info">
@@ -52,7 +52,7 @@ const Projects = () => {
                             <p className="project_description">{t.projects.description_1_project_2}</p>
                             <p className="project_description">{t.projects.description_2_project_2}</p>
                             <div className='project_links'>
-                                <a href="https://www.torneosatletismo.com.ar" target="_blank" className="project_link">www.torneosatletismo.com.ar</a>
+                                <a href="https://www.camiesposito.com" target="_blank" className="project_link">www.camiesposito.com</a>
                             </div>
                         </div>
                     </div>
